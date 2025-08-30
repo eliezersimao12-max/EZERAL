@@ -1,0 +1,13 @@
+{
+"name": "EZERAL",
+"short_name": "EZERAL",
+"description": "Consultoria, projetos e vendas em Angola.",
+"start_url": "/EZERAL/",
+"display": "standalone",
+"background_color": "#0b1220",
+"theme_color": "#0b1220",
+"icons": [
+{ "src": "/EZERAL/icon-192.png", "sizes": "192x192", "type": "image/png" },
+{ "src": "/EZERAL/icon-512.png", "sizes": "512x512", "type": "image/png" }
+]
+}
