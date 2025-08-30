@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EZERAL • Soluções que conectam negócios</title>
+  <meta name="description" content="EZERAL — Soluções em vendas, serviços e marketplace. Profissionalismo, inovação e crescimento sustentável em Angola." />
+  <meta name="theme-color" content="#0f172a" />
+  <meta property="og:title" content="EZERAL • Soluções que conectam negócios" />
+  <meta property="og:description" content="Soluções em vendas, serviços, marketplace e car wash. Em Benguela e Luanda." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/cover.jpg" />
+  <link rel="icon" href="assets/favicon.svg" />
+  <style>
+    :root{
+      --bg: #0b1020;
+      --bg-soft:#11172b;
+      --card:#0f1426;
+      --text:#e6eefc;
+      --muted:#b8c3d9;
+      --brand:#22c55e;
+      --brand-2:#38bdf8;
+      --accent:#f59e0b;
+      --maxw: 1180px;
+      --radius: 18px;
+      --shadow: 0 8px 30px rgba(0,0,0,.25);
+    }
+    body.light{
+      --bg: #f9fafb;
+      --bg-soft: #ffffff;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #4b5563;
+      background:#f9fafb;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial;
+      color:var(--text); background:linear-gradient(180deg,var(--bg) 0%, var(--bg-soft) 100%);
+    }
+    a{color:inherit; text-decoration:none}
+    .container{max-width:var(--maxw); margin:0 auto; padding:0 20px}
+    header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(160%) blur(6px); background:rgba(8,12,24,.6); border-bottom:1px solid rgba(255,255,255,.06)}
+    .logo{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.8px}
+    .logo img{height:34px; border-radius:6px}
+    .banner{background:url('assets/banner.jpg') center/cover no-repeat; height:320px; display:flex; align-items:center; justify-content:center; color:#fff; text-shadow:0 3px 12px rgba(0,0,0,.6)}
+    .banner h1{font-size:clamp(28px,4.6vw,54px); margin:0}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:12px 18px; border-radius:12px; background:linear-gradient(135deg,var(--brand),#16a34a); color:#06130a; font-weight:700;}
+    .btn-outline{padding:10px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.16)}
+    section{padding:68px 0}
+    .section-title{font-size: clamp(22px,3.2vw,34px); margin:0 0 14px}
+    .card{background:var(--card); border-radius:18px; padding:22px; box-shadow:var(--shadow)}
+    footer{padding:36px 0 44px; border-top:1px solid rgba(255,255,255,.08)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav" style="display:flex; justify-content:space-between; align-items:center; height:64px">
+      <div class="logo">
+        <img src="assets/logo.png" alt="EZERAL logo">
+        <span>EZERAL</span>
+      </div>
+      <div style="display:flex; gap:12px; align-items:center">
+        <button id="themeToggle" class="btn-outline">🌗</button>
+        <a class="btn" href="https://wa.me/244939239002" target="_blank">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="banner">
+    <h1>EZERAL — Conectando Negócios</h1>
+  </div>
+
+  <main>
+    <!-- Serviços existentes -->
+    <section id="servicos" class="container">
+      <h2 class="section-title">Serviços</h2>
+      <p class="muted">Oferecemos marketplace, car wash, consultoria e pós‑venda.</p>
+    </section>
+
+    <!-- Portfólio / Depoimentos -->
+    <section id="portfolio" class="container">
+      <h2 class="section-title">Portfólio & Depoimentos</h2>
+      <div style="display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); margin-top:20px">
+        <div class="card">
+          <h3>Cliente A</h3>
+          <p class="muted">“A EZERAL transformou nossa operação, garantindo eficiência no fornecimento de peças.”</p>
+        </div>
+        <div class="card">
+          <h3>Cliente B</h3>
+          <p class="muted">“O marketplace facilitou nossas vendas locais. Atendimento rápido e confiável.”</p>
+        </div>
+        <div class="card">
+          <h3>Car Wash</h3>
+          <p class="muted">“Excelente experiência, o carro ficou impecável enquanto relaxávamos.”</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="container">
+      <h2 class="section-title">Contato</h2>
+      <p>Email: <a href="mailto:Eliezer.simao12@outlook.com">Eliezer.simao12@outlook.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/244939239002" target="_blank">+244 939 239 002</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex; justify-content:space-between; flex-wrap:wrap; align-items:center">
+      <span>© <span id="year"></span> EZERAL • Todos os direitos reservados.</span>
+      <div>Domínio: <a href="https://www.ezeral.com" target="_blank">www.ezeral.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent=new Date().getFullYear();
+    document.getElementById('themeToggle').addEventListener('click',()=>{
+      document.body.classList.toggle('light');
+    });
+  </script>
+</body>
+</html>
